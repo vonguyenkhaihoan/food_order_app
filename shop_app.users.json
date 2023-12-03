@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "655380394b0aa67ea6d2473a"
+  },
+  "name": "testter",
+  "email": "test@gmail.com",
+  "password": "$2a$08$sQ1/AniCiLnyKbXYJrDzg.el9J6QLbrBZqM/7b8lmFPQ5VA4YWAKu",
+  "address": "13, nguyen van cu , ninh kieu , can tho",
+  "phone": "0123456789",
+  "gender": "Male",
+  "type": "user",
+  "cart": [
+    {
+      "product": {
+        "name": "Hamberger ga",
+        "description": "rat ngon",
+        "images": [
+          "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700251506/product/Hamberger%20ga/dhyqaqiwcxddkcnr9u6k.jpg"
+        ],
+        "quantity": 16,
+        "price": 100,
+        "category": "Hamberger",
+        "ratings": [],
+        "_id": {
+          "$oid": "6557c7738d270ced662954d9"
+        },
+        "createdAt": {
+          "$date": "2023-11-17T20:05:07.395Z"
+        },
+        "updatedAt": {
+          "$date": "2023-12-02T05:03:05.599Z"
+        },
+        "__v": 0
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "656aba89fec93f8c4f3ee852"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-11-14T14:12:09.390Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-02T05:03:05.600Z"
+  },
+  "__v": 47
+},
+{
+  "_id": {
+    "$oid": "6553818d4b0aa67ea6d2474f"
+  },
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$08$kv0uTqM1clPMs7Z4HDUXFuVCyOD61a3JeYUNJ19Wq2bY9kVz3nCry",
+  "address": "",
+  "phone": "",
+  "gender": "other",
+  "type": "admin",
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-11-14T14:17:49.538Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-14T14:17:49.538Z"
+  },
+  "__v": 0
+}]
