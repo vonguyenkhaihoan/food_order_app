@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "6557b1512896583adb24b536"
+  },
+  "name": "Pizza",
+  "description": "Pizza",
+  "createdAt": {
+    "$date": "2023-11-17T18:30:41.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b1802896583adb24b53e"
+  },
+  "name": "Hamberger",
+  "description": "Hamberger",
+  "createdAt": {
+    "$date": "2023-11-17T18:31:28.247Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b3222896583adb24b55e"
+  },
+  "name": "Phở",
+  "description": "Phở",
+  "createdAt": {
+    "$date": "2023-11-17T18:38:26.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b3502896583adb24b566"
+  },
+  "name": "Nước",
+  "description": "Nước",
+  "createdAt": {
+    "$date": "2023-11-17T18:39:12.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65728635d92450612b7a2b06"
+  },
+  "name": "Cơm sườn",
+  "description": "Cơm sườn",
+  "createdAt": {
+    "$date": "2023-12-08T02:57:57.438Z"
+  },
+  "__v": 0
+}]

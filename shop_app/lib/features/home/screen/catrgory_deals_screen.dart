@@ -75,7 +75,7 @@ class __CategoryDealsScreenState extends State<CategoryDealsScreen> {
                         horizontal: 15, vertical: 10),
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Keep shopping for ${widget.category}",
+                      "Tiếp tục mua sắm với ${widget.category}",
                       style: TextStyle(
                         fontSize: 20,
                       ),

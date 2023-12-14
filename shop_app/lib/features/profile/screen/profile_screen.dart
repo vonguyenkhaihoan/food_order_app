@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           title: Center(
             child: Text(
-              'User information',
+              'Thông tin cá nhân',
               style: TextStyle(
                 color: Colors.black,
               ),
@@ -105,7 +105,7 @@ class ProfileScreen extends StatelessWidget {
                     BigText(text: user.email),
                     const SizedBox(height: 10),
                     Text(
-                      'Address:',
+                      'Địa chỉ:',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -115,7 +115,7 @@ class ProfileScreen extends StatelessWidget {
                     BigText(text: user.address),
                     const SizedBox(height: 10),
                     Text(
-                      'Phone Number:',
+                      'Số điện thoại lên lạc:',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class ProfileScreen extends StatelessWidget {
                     BigText(text: user.phone),
                     const SizedBox(height: 10),
                     Text(
-                      'Gender:',
+                      'Giới tính:',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -141,7 +141,7 @@ class ProfileScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CustomButton(
-                  text: 'Update',
+                  text: 'Cập nhật',
                   onTap: () {
                     navigateToUpodateProfileScreen();
                   },
@@ -153,7 +153,7 @@ class ProfileScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CustomButton(
-                  text: 'Log out',
+                  text: 'Đăng xuất',
                   onTap: () => ProfileServices().logOut(context),
                   color: Colors.yellow[600],
                 ),

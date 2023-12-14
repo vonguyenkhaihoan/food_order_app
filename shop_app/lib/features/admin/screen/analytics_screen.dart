@@ -105,6 +105,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                       SizedBox(
                         height: 20,
                       ),
+
                       // thông tinh tổng quat
                       Container(
                         child: Row(
@@ -112,15 +113,15 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                           children: [
                             detailCart(
                               count: "$totalOrder",
-                              title: "Total Order",
+                              title: "Đơn hàng",
                             ),
                             detailCart(
-                              count: "\$ $totatRevenu",
-                              title: "Total Revenue",
+                              count: "$totatRevenu ",
+                              title: "Tổng tiền (vnd)",
                             ),
                             detailCart(
                               count: " $totatProduct",
-                              title: "total product",
+                              title: "Tổng sản phẩm",
                             )
                           ],
                         ),

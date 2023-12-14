@@ -11,8 +11,8 @@ class TopButton extends StatelessWidget {
       children: [
         Row(
           children: [
-            AccountButton(text: "Your Oders", onTap: () {}),
-            AccountButton(text: "Turn Seller", onTap: () {}),
+            AccountButton(text: "Đơn hàng của bạn", onTap: () {}),
+            AccountButton(text: "Bán hàng", onTap: () {}),
           ],
         ),
         SizedBox(
@@ -21,9 +21,9 @@ class TopButton extends StatelessWidget {
         Row(
           children: [
             AccountButton(
-                text: "Log Out",
+                text: "Đăng xuất",
                 onTap: () => AccountServices().logOut(context)),
-            AccountButton(text: "Your Wish List", onTap: () {}),
+            AccountButton(text: "Sản phẩm yêu thích", onTap: () {}),
           ],
         ),
       ],

@@ -32,7 +32,7 @@
         },
         "__v": 0
       },
-      "quantity": 1,
+      "quantity": 3,
       "_id": {
         "$oid": "656aba89fec93f8c4f3ee852"
       }
@@ -42,7 +42,7 @@
     "$date": "2023-11-14T14:12:09.390Z"
   },
   "updatedAt": {
-    "$date": "2023-12-02T05:03:05.600Z"
+    "$date": "2023-12-07T07:55:17.543Z"
   },
   "__v": 47
 },
@@ -50,19 +50,59 @@
   "_id": {
     "$oid": "6553818d4b0aa67ea6d2474f"
   },
-  "name": "admin",
+  "name": "ADIM",
   "email": "admin@gmail.com",
   "password": "$2a$08$kv0uTqM1clPMs7Z4HDUXFuVCyOD61a3JeYUNJ19Wq2bY9kVz3nCry",
-  "address": "",
-  "phone": "",
-  "gender": "other",
+  "address": "Can Tho",
+  "phone": "0123456789",
+  "gender": "Male",
   "type": "admin",
   "cart": [],
   "createdAt": {
     "$date": "2023-11-14T14:17:49.538Z"
   },
   "updatedAt": {
-    "$date": "2023-11-14T14:17:49.538Z"
+    "$date": "2023-12-08T03:00:35.874Z"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657076a84f25f80a116d1f68"
+  },
+  "name": "user",
+  "email": "user@gmail.com",
+  "password": "$2a$08$jZT0IfzYUcqygoHWM.J1KeJYTxz6akc83CYUh.0sPiLYf8NO0xTCC",
+  "address": "",
+  "phone": "",
+  "gender": "other",
+  "type": "user",
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-12-06T13:27:04.437Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-06T13:27:04.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657199f75e71519379eebcef"
+  },
+  "name": "khai hoan",
+  "email": "hoan@gmail.com",
+  "password": "$2a$08$s14NOOS/8DwGscblLKrcnuI/c8MKvO30qfBju5eDRSfOz33DLBGWO",
+  "address": "Ninh kieu can tho",
+  "phone": "0123456789",
+  "gender": "Nam",
+  "type": "user",
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-12-07T10:09:59.937Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-08T02:54:01.974Z"
+  },
+  "__v": 8
 }]

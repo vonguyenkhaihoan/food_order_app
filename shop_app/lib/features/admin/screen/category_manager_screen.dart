@@ -179,7 +179,7 @@ class _CategoryManagementScreenState extends State<CategoryManagementScreen> {
             onPressed: () {
               navigateToAddCategory();
             },
-            tooltip: 'Add a Category',
+            tooltip: 'Thêm danh mục',
             child: const Icon(Icons.add),
           ),
           floatingActionButtonLocation:

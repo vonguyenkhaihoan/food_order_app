@@ -49,7 +49,7 @@ class _DealOfDayState extends State<DealOfDay> {
                       alignment: Alignment.topLeft,
                       padding: const EdgeInsets.only(left: 10, top: 15),
                       child: const Text(
-                        "Deal Of Day",
+                        "Ưu đãi trong ngày",
                         style: TextStyle(fontSize: 20),
                       ),
                     ),
@@ -58,27 +58,27 @@ class _DealOfDayState extends State<DealOfDay> {
                       height: 235,
                       fit: BoxFit.fitHeight,
                     ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      padding:
-                          const EdgeInsets.only(left: 15, top: 5, right: 40),
-                      child: const Text(
-                        '\$900',
-                        style: TextStyle(fontSize: 18, color: Colors.red),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      padding:
-                          const EdgeInsets.only(left: 15, top: 5, right: 40),
-                      child: const Text(
-                        'Rivaan',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+                    // Container(
+                    //   alignment: Alignment.topLeft,
+                    //   padding:
+                    //       const EdgeInsets.only(left: 15, top: 5, right: 40),
+                    // child: const Text(
+                    //   '\$900',
+                    //   style: TextStyle(fontSize: 18, color: Colors.red),
+                    //   maxLines: 2,
+                    //   overflow: TextOverflow.ellipsis,
+                    // ),
+                    // ),
+                    // Container(
+                    //   alignment: Alignment.topLeft,
+                    //   padding:
+                    //       const EdgeInsets.only(left: 15, top: 5, right: 40),
+                    //   child: const Text(
+                    //     'Rivaan',
+                    //     maxLines: 2,
+                    //     overflow: TextOverflow.ellipsis,
+                    //   ),
+                    // ),
 
                     //
                     SingleChildScrollView(
@@ -104,7 +104,7 @@ class _DealOfDayState extends State<DealOfDay> {
                           .copyWith(left: 15),
                       alignment: Alignment.topLeft,
                       child: Text(
-                        'See all deals',
+                        'Xem ưu đãi',
                         style: TextStyle(color: Colors.cyan[800]),
                       ),
                     )

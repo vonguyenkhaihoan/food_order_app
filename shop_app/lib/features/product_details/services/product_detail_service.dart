@@ -37,8 +37,8 @@ class ProductDetailsServices {
           User user =
               userProvider.user.copyWith(cart: jsonDecode(res.body)['cart']);
           userProvider.setUserFromModel(user);
-          showSnackBar(
-              context, 'Add to Cart successfully!', Colors.green[400]!);
+          showSnackBarSucc(
+              context, 'Thêm sản phẩm vào giỏ hàng thành công!', Colors.green[400]!);
         },
       );
     } catch (e) {
@@ -73,7 +73,7 @@ class ProductDetailsServices {
         context: context,
         onSuccess: () {
           // Navigator.pop(context);
-          showSnackBar(context, 'Product review success!', Colors.green[400]!);
+          showSnackBarSucc(context, 'Đánh giá sản phẩm thành công!', Colors.green[400]!);
         },
       );
     } catch (e) {

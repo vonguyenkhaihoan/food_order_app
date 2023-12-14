@@ -13,7 +13,7 @@ class AuthController {
       const existingUser = await UserModel.findOne({ email });
       if (existingUser) {
         //tra lại ma loi tu phia nguoi dung và thong bao
-        return res.status(400).json({ msg: 'User with same email already exists!' });
+        return res.status(400).json({ msg: 'Người dùng có cùng Eamil tồn tại!' });
       }
 
       // ma hoa mat khau
@@ -43,14 +43,14 @@ class AuthController {
       const user = await UserModel.findOne({ email });
       if (!user) {
         //tra lại ma loi tu phia nguoi dung và thong bao
-        return res.status(400).json({ msg: 'User with email does not exists!' });
+        return res.status(400).json({ msg: 'Người dùng có Email không tồn tại!' });
       }
 
         // Kiểm tra so sanh password co dung voi database khong
         const isMatch = await bcryptjs.compare(password, user.password);
         if (!isMatch) {
           //tra lại ma loi tu phia nguoi dung và thong bao
-          return res.status(400).json({ msg: 'incorect Password' });
+          return res.status(400).json({ msg: 'Mật khẩu không chính xác!' });
         }
 
         //xac minh jwt de dam bao dung nguoi dung

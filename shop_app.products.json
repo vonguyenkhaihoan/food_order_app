@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "6557b47f2896583adb24b58f"
+  },
+  "name": "Pizza hai san",
+  "description": "rat ngon",
+  "images": [
+    "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700246654/product/Pizza%20hai%20san/btbqe76nwewcexxo4bhv.jpg"
+  ],
+  "quantity": 17,
+  "price": 120000,
+  "category": "Pizza",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2023-11-17T18:44:15.630Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-19T19:12:03.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b4ab2896583adb24b596"
+  },
+  "name": "Hamberger Bo",
+  "description": "rat ngon",
+  "images": [
+    "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700246698/product/Hamberger%20Bo/hu8qfabmq6y1a0iyghvk.jpg"
+  ],
+  "quantity": 10,
+  "price": 130000,
+  "category": "Hamberger",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2023-11-17T18:44:59.423Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-17T18:58:23.029Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b5102896583adb24b5a4"
+  },
+  "name": "Capochino",
+  "description": "rat ngon",
+  "images": [
+    "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700246799/product/Capochino/ac91ha7owzjcqpn3ordw.webp"
+  ],
+  "quantity": 44,
+  "price": 50000,
+  "category": "Nước",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2023-11-17T18:46:40.465Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-07T10:13:52.042Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557b5462896583adb24b5ae"
+  },
+  "name": "Pho bo",
+  "description": "rat ngon",
+  "images": [
+    "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700246853/product/Pho%20bo/xn5bpfobaekzq6lntxzd.jpg"
+  ],
+  "quantity": 448,
+  "price": 80000,
+  "category": "Phở",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2023-11-17T18:47:34.167Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-08T02:54:01.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6557c7738d270ced662954d9"
+  },
+  "name": "Hamberger ga",
+  "description": "rat ngon",
+  "images": [
+    "https://res.cloudinary.com/dgcuvbmzi/image/upload/v1700251506/product/Hamberger%20ga/dhyqaqiwcxddkcnr9u6k.jpg"
+  ],
+  "quantity": 8,
+  "price": 100000,
+  "category": "Hamberger",
+  "ratings": [],
+  "createdAt": {
+    "$date": "2023-11-17T20:05:07.395Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-08T02:54:01.959Z"
+  },
+  "__v": 0
+}]

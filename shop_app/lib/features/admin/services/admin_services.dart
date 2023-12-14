@@ -76,7 +76,7 @@ class AdminServices {
         context: context,
         onSuccess: () {
           Navigator.pop(context);
-          showSnackBar(context, 'Product Added Successfully!', Colors.green);
+          showSnackBarSucc(context, 'Thêm danh mục thành công!', Colors.green);
         },
       );
     } catch (e) {
@@ -103,7 +103,7 @@ class AdminServices {
         response: res,
         context: context,
         onSuccess: () {
-          showSnackBar(context, 'Delete Category Successfully', Colors.green);
+          showSnackBarSucc(context, 'Xóa danh mục thành công!', Colors.green);
         },
       );
     } catch (e) {
@@ -194,7 +194,7 @@ class AdminServices {
         context: context,
         onSuccess: () {
           Navigator.pop(context);
-          showSnackBar1(context, 'Product Added Successfully!');
+          showSnackBar1(context, 'Sản phẩm đã thêm thành công!');
         },
       );
     } catch (e) {
@@ -263,6 +263,7 @@ class AdminServices {
         response: res,
         context: context,
         onSuccess: () {
+          showSnackBarSucc(context, 'Xóa sản phẩm thành công!', Colors.green);
           onSuccess();
         },
       );
@@ -505,7 +506,7 @@ class AdminServices {
           );
           userProvider.setUserFromModel(user);
           Navigator.pop(context);
-          showSnackBar(context, 'Update successfully', Colors.green);
+          showSnackBarSucc(context, 'Cập nhật thành công', Colors.green);
         },
       );
     } catch (e) {

@@ -75,8 +75,8 @@ class AddressServices {
           );
           userProvider.setUserFromModel(user);
           Navigator.pop(context);
-          showSnackBar(
-              context, 'Your order has been placed!', Colors.green[400]!);
+          showSnackBarSucc(
+              context, 'Đặt hàng thành công!', Colors.green[400]!);
         },
       );
     } catch (e) {

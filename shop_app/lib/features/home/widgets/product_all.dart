@@ -9,14 +9,14 @@ import 'package:shop_app/features/product_details/screens/product_detail_screen.
 import 'package:shop_app/models/product_model.dart';
 import 'package:flutter/material.dart';
 
-class TopTenRate extends StatefulWidget {
-  const TopTenRate({super.key});
+class ProductAll extends StatefulWidget {
+  const ProductAll({super.key});
 
   @override
-  State<TopTenRate> createState() => _TopTenRateState();
+  State<ProductAll> createState() => _ProductAllState();
 }
 
-class _TopTenRateState extends State<TopTenRate> {
+class _ProductAllState extends State<ProductAll> {
   List<Product>? productList;
   final HomeServices homeServices = HomeServices();
 
@@ -28,8 +28,8 @@ class _TopTenRateState extends State<TopTenRate> {
 
   //ham lay danh sachs san pham
   fetchTopRateProducts() async {
-    productList = await homeServices.fetchTopRateProducts(
-      context: context,
+    productList = await homeServices.fetchAllProducts(
+      context,
     );
     setState(() {});
   }
@@ -47,23 +47,9 @@ class _TopTenRateState extends State<TopTenRate> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     BigText(
-                      text: "Top sản phẩm đánh giá cao",
+                      text: "Tất cả sản phẩm",
                       size: 20,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          TopRateList.routeName,
-                          arguments: "Top sản phẩm đánh giá cao",
-                        );
-                      },
-                      child: Text(
-                        "Xem thêm",
-                        style: TextStyle(
-                            color: GlobalVariables.selectedNavBarColor),
-                      ),
-                    )
                   ],
                 ),
                 SizedBox(
@@ -72,7 +58,7 @@ class _TopTenRateState extends State<TopTenRate> {
                 ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: productList!.length <= 3 ? productList!.length : 3,
+                  itemCount: productList!.length,
                   itemBuilder: (context, index) {
                     final product = productList![index];
                     final isOutOfStock = product.quantity == 0;

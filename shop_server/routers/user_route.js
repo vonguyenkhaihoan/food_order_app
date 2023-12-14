@@ -2,6 +2,9 @@ const router = require("express").Router();
 const AuthMidd = require("../middlewares/auth_middle");
 const UserController = require("../controller/user_controller");
 
+//lây tất cả sản phẩm
+router.get("/api/get-products", AuthMidd ,UserController.getAllProduct);
+
 
 // Add product to cart
 router.post('/api/add-to-cart', AuthMidd,  UserController.addToCart);

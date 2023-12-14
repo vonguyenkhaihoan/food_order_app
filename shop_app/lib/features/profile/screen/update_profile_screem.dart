@@ -17,14 +17,14 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
-  String gender = 'Orther';
+  String gender = 'Khác';
   final _updateFormKey = GlobalKey<FormState>();
   final ProfileServices profileServices = ProfileServices();
 
   List<String> genderList = [
-    'Orther',
-    'Male',
-    'Shemale',
+    'Khác',
+    'Nam',
+    'Nữ',
   ];
 
   @override
@@ -59,7 +59,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
             ),
           ),
           title: Text(
-            'Update User information',
+            'Cập nhật thông tin cá nhân',
             style: TextStyle(
               color: Colors.black,
             ),
@@ -78,18 +78,18 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   children: [
                     CustomTextField(
                       controller: usernameController,
-                      hintText: 'User Name',
+                      hintText: 'Tên người dùng',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: addressController,
-                      hintText: 'Address',
+                      hintText: 'Địa chỉ',
                       maxLines: 7,
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: phoneController,
-                      hintText: 'Phone munber',
+                      hintText: 'Số điện thoại liên lạc',
                     ),
                     const SizedBox(height: 10),
                     SizedBox(
@@ -116,7 +116,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                 ),
               ),
               CustomButton(
-                text: 'Save',
+                text: 'Lưu',
                 onTap: updateProfile,
                 color: Colors.yellow[600],
               ),

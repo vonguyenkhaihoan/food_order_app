@@ -47,7 +47,7 @@ class _CustomTextField2State extends State<CustomTextField2> {
       ),
       validator: (val) {
         if (val == null || val.isEmpty) {
-          return 'Enter your ${widget.hintText}';
+          return 'Chưa nhập ${widget.hintText}';
         }
         return null;
       },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constains/global_variables.dart';
+import 'package:shop_app/constains/utils.dart';
 import 'package:shop_app/features/admin/services/admin_services.dart';
 
 class AddCategoryScreen extends StatefulWidget {
@@ -46,15 +47,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
             categoryDescription: _categoryDescriptionController.text,
             context: context,
           );
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Category updated successfully'),
-            ),
-          );
+          Navigator.pop(context);
+          showSnackBarSucc(context, 'Cập nhật mục thành công!', Colors.green);
         } catch (error) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Error updating category: $error'),
+              content: Text('Lỗi cập nhật không thành công: $error'),
             ),
           );
         }
@@ -66,7 +64,6 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
           context: context,
         );
       }
-
     }
   }
 
@@ -99,7 +96,7 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Category Name:',
+                'Tên danh mục:',
                 style: TextStyle(fontSize: 16),
               ),
               SizedBox(height: 8),
@@ -107,18 +104,18 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                 controller: _categoryNameController,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter category name';
+                    return 'Nhập tên danh mục';
                   }
                   return null;
                 },
                 decoration: InputDecoration(
-                  hintText: 'Enter category name',
+                  hintText: 'Nhập tên danh mục',
                   border: OutlineInputBorder(),
                 ),
               ),
               SizedBox(height: 8),
               Text(
-                'Category Description:',
+                'Mô tả danh mục:',
                 style: TextStyle(fontSize: 16),
               ),
               SizedBox(height: 8),
@@ -126,12 +123,12 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                 controller: _categoryDescriptionController,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter category description';
+                    return 'Nhập môt tả danh mục';
                   }
                   return null;
                 },
                 decoration: InputDecoration(
-                  hintText: 'Enter category description',
+                  hintText: 'Nhập mô tả danh mục',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -145,13 +142,13 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                           onPressed: () {
                             addOrUpdateCategory();
                           },
-                          child: Text('Update'),
+                          child: Text('Cập nhật'),
                         )
                       : ElevatedButton(
                           onPressed: () {
                             addOrUpdateCategory();
                           },
-                          child: Text('Add Category'),
+                          child: Text('Thêm sanh mục'),
                         ),
                   SizedBox(width: 16),
                   ElevatedButton(
@@ -169,7 +166,7 @@ class _AddCategoryScreenState extends State<AddCategoryScreen> {
                       Navigator.pop(context,
                           false); // Đóng màn hình và truyền giá trị false làm kết quả
                     },
-                    child: Text('Cancel'),
+                    child: Text('Hủy'),
                   ),
                 ],
               ),

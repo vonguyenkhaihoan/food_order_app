@@ -3,6 +3,7 @@ import 'package:shop_app/features/address/screens/address_screen.dart';
 import 'package:shop_app/features/admin/screen/add_category_screen.dart';
 import 'package:shop_app/features/admin/screen/add_product_screen.dart';
 import 'package:shop_app/features/admin/screen/admin_product_detail_screen.dart';
+import 'package:shop_app/features/admin/screen/admin_screen.dart';
 import 'package:shop_app/features/admin/screen/admin_update_screen.dart';
 import 'package:shop_app/features/auth/screens/auth_screen.dart';
 import 'package:shop_app/features/home/screen/catrgory_deals_screen.dart';
@@ -108,6 +109,14 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
 
     /*-----------------------------------*/
     // ADMIN
+
+    //AdminHome
+    case AdminScreem.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const AdminScreem(),
+      );
+
     //ADD PRODUCT
     case AddProductScreen.routeName:
       return MaterialPageRoute(

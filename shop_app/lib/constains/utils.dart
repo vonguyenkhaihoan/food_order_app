@@ -23,7 +23,7 @@ void showSnackBar(BuildContext context, String text, Color color) {
           children: [
             Icon(Icons.info),
             Text(
-              "Error",
+              "Lỗi",
             ),
           ],
         ),
@@ -61,6 +61,53 @@ void showSnackBar(BuildContext context, String text, Color color) {
   );
 }
 
+void showSnackBarSucc(BuildContext context, String text, Color color) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.info),
+            Text(
+              "Thành công",
+            ),
+          ],
+        ),
+        content: Text(text),
+        backgroundColor: color,
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.close),
+                Text('Close'),
+              ],
+            ),
+            style: TextButton.styleFrom(
+              // Chỉnh màu chữ thành trắng
+              foregroundColor: Colors.white,
+              // Chỉnh đường viền thành màu đen
+              backgroundColor: Colors.black,
+              // Chỉnh độ dày đường viền thành 2
+              side: BorderSide(
+                color: Colors.black,
+                width: 2,
+              ),
+              // Chỉnh độ tròn của đường viền
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+          ),
+        ],
+      );
+    },
+  );
+}
 
 void showSnackBar1(BuildContext context, String text) {
   ScaffoldMessenger.of(context).showSnackBar(

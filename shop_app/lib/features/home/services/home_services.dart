@@ -148,4 +148,41 @@ class HomeServices {
     }
     return product;
   }
+
+  //get all product
+  Future<List<Product>> fetchAllProducts( BuildContext context) async {
+    final userProvider = Provider.of<UserProvider>(context, listen: false);
+
+    //tao bien luu danh sach san pham
+    List<Product> productList = [];
+
+    try {
+      http.Response res = await http.get(Uri.parse(apiAllProduct), headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+        'x-auth-token': userProvider.user.token,
+      });
+
+      httpErrorHandle(
+        response: res,
+        context: context,
+        onSuccess: () {
+          //chay vong lap san pham lays tudb
+          for (int i = 0; i < jsonDecode(res.body).length; i++) {
+            //them vao danh sach san pham
+            productList.add(
+              Product.fromJson(
+                jsonEncode(
+                  jsonDecode(res.body)[i],
+                ),
+              ),
+            );
+          }
+        },
+      );
+    } catch (e) {
+      showSnackBar(context, e.toString(), Colors.red);
+    }
+    return productList;
+  }
+
 }

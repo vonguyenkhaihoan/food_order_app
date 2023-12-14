@@ -110,7 +110,7 @@ class ProfileServices {
           );
           userProvider.setUserFromModel(user);
           Navigator.pop(context);
-          showSnackBar(context, 'Update successfully', Colors.green);
+          showSnackBarSucc(context, 'Cập nhật thành công', Colors.green);
         },
       );
     } catch (e) {

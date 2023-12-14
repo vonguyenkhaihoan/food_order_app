@@ -10,31 +10,31 @@ const CategoryModel =require('../model/catyerogy_model.js');
 router.post('/admin/add-product', AdminMidd,  AdminController.addProduct);
 router.post('/admin/add-product-caterogy',   AdminController.addProductCaterogy);
 
-router.post('/addProduct', async (req, res) => {
-    try {
-      // Extract product details from the request body
-      const { name, description, images, quantity, price, category, ratings } = req.body;
+// router.post('/addProduct', async (req, res) => {
+//     try {
+//       // Extract product details from the request body
+//       const { name, description, images, quantity, price, category, ratings } = req.body;
   
-      // Create a new product instance
-      const newProduct = new ProductModel({
-        name,
-        description,
-        images,
-        quantity,
-        price,
-        category,
-        ratings,
-      });
+//       // Create a new product instance
+//       const newProduct = new ProductModel({
+//         name,
+//         description,
+//         images,
+//         quantity,
+//         price,
+//         category,
+//         ratings,
+//       });
   
-      // Save the new product to the database
-      const savedProduct = await newProduct.save();
+//       // Save the new product to the database
+//       const savedProduct = await newProduct.save();
   
-      res.status(200).json(savedProduct);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
+//       res.status(200).json(savedProduct);
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ error: 'Internal Server Error' });
+//     }
+//   });
 
 
 //get all product

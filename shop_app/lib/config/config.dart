@@ -1,4 +1,4 @@
-const url = 'http://192.168.1.6:3000';
+const url = 'http://10.13.128.247:3000';
 
 const signup = "$url/api/signup";
 const signin = "$url/api/signin";
@@ -29,6 +29,11 @@ const apiSaveUserAddress = "$url/api/save-user-address";
 const apiUpdateUser = "$url/api/update-user";
 
 const apiAllCaterogy = "$url/api/categories";
+
+const apiAllProduct = "$url/api/get-products";
+
+
+
 
 //orderproduct
 const apiOrderProduct = "$url/api/order";

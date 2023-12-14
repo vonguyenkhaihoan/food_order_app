@@ -141,7 +141,7 @@ class _PostScrenState extends State<PostScren> {
                                             ),
                                             SizedBox(height: 5),
                                             BigText(
-                                              text: '\$${productData.price}',
+                                              text: '${productData.price} vnd',
                                               color: Colors.redAccent,
                                             ),
                                             SizedBox(height: 5),
@@ -188,7 +188,7 @@ class _PostScrenState extends State<PostScren> {
               //nut hanh dong noi
               floatingActionButton: FloatingActionButton(
                 onPressed: navigateToAddProduct,
-                tooltip: 'Add a Product',
+                tooltip: 'Thêm sản phẩm',
                 child: const Icon(Icons.add),
               ),
               floatingActionButtonLocation:

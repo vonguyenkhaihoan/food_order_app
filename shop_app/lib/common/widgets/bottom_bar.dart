@@ -85,7 +85,7 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.person_outline_outlined,
+                Icons.all_inbox_outlined,
               ),
             ),
             label: '',

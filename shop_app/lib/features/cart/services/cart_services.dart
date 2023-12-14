@@ -64,7 +64,7 @@ class CartServices {
           User user =
               userProvider.user.copyWith(cart: jsonDecode(res.body)['cart']);
           userProvider.setUserFromModel(user);
-          showSnackBar(context, 'Xóa thanh công tất cả',
+          showSnackBarSucc(context, 'Xóa thanh công tất cả sản phẩm',
               Color.fromARGB(255, 161, 117, 113));
         },
       );
@@ -97,7 +97,7 @@ class CartServices {
           User user =
               userProvider.user.copyWith(cart: jsonDecode(res.body)['cart']);
           userProvider.setUserFromModel(user);
-          showSnackBar(context, 'Xóa sản phẩm thành công!',
+          showSnackBarSucc(context, 'Xóa sản phẩm thành công!',
               const Color.fromARGB(255, 161, 117, 113));
         },
       );

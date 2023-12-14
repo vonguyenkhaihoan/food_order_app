@@ -105,7 +105,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             width: 1,
                           ),
                         ),
-                        hintText: 'Search Amazon.in',
+                        hintText: 'Tìm kiếm sản phẩm',
                         hintStyle: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 17,
@@ -133,7 +133,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BigText(text: ' View order detail'),
+              BigText(text: 'Chi tiết đơn hàng'),
               //info order
               Container(
                 width: double.infinity,
@@ -151,7 +151,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     //date order
                     Row(
                       children: [
-                        Text('Order Date: ', textAlign: TextAlign.left),
+                        Text('Ngày đặt: ', textAlign: TextAlign.left),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Text('${DateFormat().format(
@@ -166,7 +166,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     SizedBox(height: 5),
                     Row(
                       children: [
-                        Text('Order ID: ', textAlign: TextAlign.left),
+                        Text('Mã Đơn hàng: ', textAlign: TextAlign.left),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Text('${widget.order.id}'),
@@ -178,10 +178,10 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     SizedBox(height: 5),
                     Row(
                       children: [
-                        Text('Order Total: ', textAlign: TextAlign.left),
+                        Text('Tống giá tiền: ', textAlign: TextAlign.left),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text('\$${widget.order.totalPrice}'),
+                          child: Text('${widget.order.totalPrice} vnd'),
                         ),
                       ],
                     ),
@@ -190,7 +190,8 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     SizedBox(height: 5),
                     Row(
                       children: [
-                        Text('Phone contact: ', textAlign: TextAlign.left),
+                        Text('Số điện thoại liên lạc: ',
+                            textAlign: TextAlign.left),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Text('${widget.order.phone}'),
@@ -202,7 +203,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     SizedBox(height: 5),
                     Row(
                       children: [
-                        Text('Address: ', textAlign: TextAlign.left),
+                        Text('Địa chỉ: ', textAlign: TextAlign.left),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Text(
@@ -219,7 +220,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
               //product pruchase
               const SizedBox(height: 10),
               const Text(
-                'Purchase Details',
+                'Sản phẩm chi tiết',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -272,7 +273,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                     Text(
-                                      'Quantity: ${widget.order.quantity[i]}',
+                                      'Số lượng: ${widget.order.quantity[i]}',
                                     ),
                                   ],
                                 ),
@@ -288,7 +289,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
               //tracking
               const SizedBox(height: 10),
               const Text(
-                'Tracking',
+                'Theo dỗi đơn hàng',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -308,7 +309,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                         return const SizedBox();
                       } else {
                         return CustomButton(
-                          text: 'Done',
+                          text: 'Hoàn thành',
                           onTap: () => changeOrderStatus(details.currentStep),
                         );
                       }
@@ -317,35 +318,36 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                   },
                   steps: [
                     Step(
-                      title: const Text('Pending'),
+                      title: const Text('Chẩn bị'),
                       content:
-                          const Text("Your order  is yet to be deliverred"),
+                          const Text("Đơn hàng của bạn đang được chuẩn bị."),
                       isActive: currentStep > 0,
                       state: currentStep > 0
                           ? StepState.complete
                           : StepState.indexed,
                     ),
                     Step(
-                      title: const Text('Complete'),
+                      title: const Text('Đóng gói'),
                       content: const Text(
-                          "Your order has been processed and is awaiting shipment."),
+                          "Đơn hàng của bạn đã đóng gói chờ vận chuyển."),
                       isActive: currentStep > 1,
                       state: currentStep > 1
                           ? StepState.complete
                           : StepState.indexed,
                     ),
                     Step(
-                      title: const Text('Recvived'),
-                      content: const Text("Your order is being shipped."),
+                      title: const Text('Vận chuyển'),
+                      content:
+                          const Text("Đơn hàng của bạn đang được vận chuyển."),
                       isActive: currentStep > 2,
                       state: currentStep > 2
                           ? StepState.complete
                           : StepState.indexed,
                     ),
                     Step(
-                      title: const Text('Delivered'),
-                      content: const Text(
-                          "Your order has been delivered successfully!"),
+                      title: const Text('Giao thành công'),
+                      content:
+                          const Text("Đươn hàng của bạn đã giao thành công"),
                       isActive: currentStep >= 3,
                       state: currentStep >= 3
                           ? StepState.complete

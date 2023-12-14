@@ -139,14 +139,14 @@ class _AddressScreenState extends State<AddressScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Select Payment Method'),
+          title: Text('Chọn phương thức thanh toán'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               //nut radio Sign Up
               ListTile(
                 title: const Text(
-                  'Cash on Delivery',
+                  'Thanh toán khi nhận hàng',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -165,7 +165,7 @@ class _AddressScreenState extends State<AddressScreen> {
               ),
               ListTile(
                 title: const Text(
-                  'Stripe',
+                  'Thanh toán online',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -196,10 +196,10 @@ class _AddressScreenState extends State<AddressScreen> {
 
   Future<void> makePayment() async {
     try {
-      paymentIntent = await createPaymentIntent(widget.totalAmount, 'USD');
+      paymentIntent = await createPaymentIntent(widget.totalAmount, 'VND');
 
       var gpay = const PaymentSheetGooglePay(
-          merchantCountryCode: "US", currencyCode: "USD", testEnv: true);
+          merchantCountryCode: "VN", currencyCode: "VND", testEnv: true);
 
       //STEP 2: Initialize Payment Sheet
       await Stripe.instance
@@ -208,7 +208,7 @@ class _AddressScreenState extends State<AddressScreen> {
                   paymentIntentClientSecret: paymentIntent![
                       'client_secret'], //Gotten from payment intent
                   style: ThemeMode.light,
-                  merchantDisplayName: 'Abhi',
+                  merchantDisplayName: 'Hoan',
                   googlePay: gpay))
           .then((value) {});
 
@@ -236,17 +236,17 @@ class _AddressScreenState extends State<AddressScreen> {
         user = userProvider.user;
       } else {
         // Handle the case where userProvider is null or not initialized
-        print("UserProvider is null or not initialized");
+        print("Chưa khởi tạo người dùng");
         return;
       }
 
       await Stripe.instance.presentPaymentSheet().then((value) {
-        print("Payment Successfully");
+        print("Thanh toán thành công");
         // Call payPressed function here
         payPressed(user.address, user.phone);
       });
     } catch (e, stackTrace) {
-      print('Error in displayPaymentSheet: $e');
+      print('Thanh toán lỗi: $e');
       print(stackTrace);
     }
   }
@@ -290,7 +290,7 @@ class _AddressScreenState extends State<AddressScreen> {
             ),
           ),
           title: Text(
-            'Check out',
+            'Đặt hàng',
             style: TextStyle(
               color: Colors.black,
             ),
@@ -336,7 +336,7 @@ class _AddressScreenState extends State<AddressScreen> {
                     ),
                     const SizedBox(height: 20),
                     const Text(
-                      'OR',
+                      'Hoặc',
                       style: TextStyle(
                         fontSize: 18,
                       ),
@@ -352,27 +352,27 @@ class _AddressScreenState extends State<AddressScreen> {
                   children: [
                     CustomTextField(
                       controller: streetController,
-                      hintText: 'No. Street',
+                      hintText: 'Tên đường',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: communeController,
-                      hintText: 'Commune/Ward',
+                      hintText: 'Xã/Phường',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: districtController,
-                      hintText: 'district',
+                      hintText: 'Huyện/Quận',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: cityController,
-                      hintText: 'Town/City',
+                      hintText: 'Thành Phố',
                     ),
                     const SizedBox(height: 10),
                     CustomTextField(
                       controller: phoneController,
-                      hintText: 'Phone ',
+                      hintText: 'Số điện thoại liên hệ ',
                     ),
                   ],
                 ),
@@ -399,17 +399,17 @@ class _AddressScreenState extends State<AddressScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         BigText(
-                          text: "Payment Method: ",
+                          text: "Phương thức thanh toán: ",
                           size: 16,
                         ),
                         if (_payment == paymentMethod.cash)
                           BigText(
-                            text: "Cash on Delivery",
+                            text: "COD",
                             size: 16,
                           )
                         else if (_payment == paymentMethod.stripe)
                           BigText(
-                            text: "Stripe",
+                            text: "Thanh toán online",
                             size: 16,
                           )
                       ],
@@ -451,7 +451,7 @@ class _AddressScreenState extends State<AddressScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CustomButton(
-                  text: 'Buy',
+                  text: 'Đặt hàng',
                   onTap: () async {
                     if (_payment == paymentMethod.cash) {
                       payPressed(user.address, user.phone);

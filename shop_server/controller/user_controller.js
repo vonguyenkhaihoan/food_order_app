@@ -4,7 +4,21 @@ const OrderModel = require('../model/order_model');
 
 
 class UserController{
-    //them san pham
+    //lay tat ca san pham
+    async getAllProduct (req, res)  {
+      try {
+        //tim tat ca san pham
+        // const products = await ProductModel.find({});
+        const products = await ProductModel.find().sort({ createdAt: 'desc' });
+    
+        //tra ve nguoi dung
+        res.json(products);
+      } catch (e) {
+        res.status(500).json({ error: e.message });
+      }
+    }
+
+    //them san pham vào gio hàng
     async addToCart (req, res) {
         try {
             // lấy id từ UI

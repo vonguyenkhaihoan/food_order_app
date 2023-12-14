@@ -97,7 +97,7 @@ class _CartProductState extends State<CartProduct> {
                         width: 235,
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
-                          '\$${product.price}',
+                          '${product.price} vnd',
                           style: TextStyle(
                               fontSize: 20,
                               color: Colors.redAccent,

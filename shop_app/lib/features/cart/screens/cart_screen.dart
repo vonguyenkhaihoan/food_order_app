@@ -102,7 +102,7 @@ class _CartScreenState extends State<CartScreen> {
                             width: 1,
                           ),
                         ),
-                        hintText: 'Search Amazon.in',
+                        hintText: 'Tìm kiếm sản phẩm',
                         hintStyle: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 17,
@@ -134,7 +134,7 @@ class _CartScreenState extends State<CartScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomButton(
-              text: 'Proceed to Buy (${user.cart.length} items)',
+              text: 'Tiến hành mua (${user.cart.length} sản phẩm)',
               // onTap: ()=>navigateToAddressScreen(sum),
               onTap: () {
                 user.cart.isNotEmpty ? navigateToAddressScreen(sum) : null;
@@ -146,7 +146,7 @@ class _CartScreenState extends State<CartScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomButton(
-              text: 'Remove all (${user.cart.length} items)',
+              text: 'Xóa tất cả (${user.cart.length} sản phẩm)',
               onTap: () {
                 user.cart.isNotEmpty ? RemoveAllCart() : null;
               },

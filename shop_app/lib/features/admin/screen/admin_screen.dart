@@ -317,10 +317,11 @@ import 'package:shop_app/features/admin/screen/analytics_screen.dart';
 import 'package:shop_app/features/admin/screen/category_manager_screen.dart';
 import 'package:shop_app/features/admin/screen/order_screen.dart';
 import 'package:shop_app/features/admin/screen/post_screen.dart';
-import 'package:shop_app/features/home/screen/catrgory_deals_screen.dart';
+// import 'package:shop_app/features/home/screen/catrgory_deals_screen.dart';
 import 'package:shop_app/features/profile/services/profile_services.dart';
 
 class AdminScreem extends StatefulWidget {
+  static const String routeName = '/Admin-home';
   const AdminScreem({Key? key}) : super(key: key);
 
   @override
@@ -431,12 +432,19 @@ class _AdminScreemState extends State<AdminScreem> {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                child: Image.asset(
-                  'assets/images/amazon_in.png',
-                  width: 120,
-                  height: 45,
-                  color: Colors.black,
+                child: Text(
+                  'Trang quản lý',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                 ),
+                // Image.asset(
+                //   'assets/images/amazon_in.png',
+                //   width: 120,
+                //   height: 45,
+                //   color: Colors.black,
+                // ),
               ),
               Container(
                 child: Text(
@@ -456,4 +464,3 @@ class _AdminScreemState extends State<AdminScreem> {
     );
   }
 }
-

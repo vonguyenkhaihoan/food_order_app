@@ -4,6 +4,7 @@ import 'package:shop_app/common/widgets/bottom_bar.dart';
 import 'package:shop_app/config/config.dart';
 import 'package:shop_app/constains/error_handling.dart';
 import 'package:shop_app/constains/utils.dart';
+import 'package:shop_app/features/admin/screen/admin_screen.dart';
 import 'package:shop_app/features/home/screen/home_screen.dart';
 import 'package:shop_app/models/user_model.dart';
 import 'package:shop_app/provider/user_provider.dart';
@@ -44,9 +45,9 @@ class AuthService {
         response: res,
         context: context,
         onSuccess: () {
-          showSnackBar(
+          showSnackBarSucc(
               context,
-              'Account created! Login with the same credentials!',
+              'Tài khoản đã được tạo! Đăng nhập với thông tin tương tự!',
               Colors.green);
         },
       );
@@ -80,10 +81,26 @@ class AuthService {
           //khởi tạo lưu trữ cục bọ trên máy
           SharedPreferences prefs = await SharedPreferences.getInstance();
           await prefs.setString('x-auth-token', jsonDecode(res.body)['token']);
+
           Provider.of<UserProvider>(context, listen: false).setUser(res.body);
           // Navigator.pushNamed(context, HomeScreen.routeName);
-          Navigator.pushNamedAndRemoveUntil(
-              context, BottomBar.routeName, (route) => false);
+          // Navigator.pushNamedAndRemoveUntil(
+          //     context, BottomBar.routeName, (route) => false);
+
+          // Check user type from the response
+          String userType = jsonDecode(res.body)['type'];
+
+          // Set user information in the provider
+          Provider.of<UserProvider>(context, listen: false).setUser(res.body);
+
+          // Redirect to the appropriate screen based on user type
+          if (userType == 'admin') {
+            Navigator.pushNamedAndRemoveUntil(
+                context, AdminScreem.routeName, (route) => false);
+          } else {
+            Navigator.pushNamedAndRemoveUntil(
+                context, BottomBar.routeName, (route) => false);
+          }
         },
       );
     } catch (err) {
@@ -131,4 +148,5 @@ class AuthService {
       showSnackBar(context, err.toString(), Colors.yellow);
     }
   }
+  
 }

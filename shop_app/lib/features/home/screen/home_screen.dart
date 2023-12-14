@@ -3,6 +3,7 @@ import 'package:shop_app/features/home/widgets/address_box.dart';
 import 'package:shop_app/constains/global_variables.dart';
 import 'package:shop_app/features/home/widgets/carousel_image_.dart';
 import 'package:shop_app/features/home/widgets/deal_of_day.dart';
+import 'package:shop_app/features/home/widgets/product_all.dart';
 import 'package:shop_app/features/home/widgets/top_categories.dart';
 import 'package:shop_app/features/home/widgets/top_ten_rate_product.dart';
 import 'package:shop_app/features/search/screen/search_screen.dart';
@@ -86,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 1,
                           ),
                         ),
-                        hintText: 'Search Amazon.in',
+                        hintText: 'Tìm kiếm sản phẩm',
                         hintStyle: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 17,
@@ -122,7 +123,8 @@ class _HomeScreenState extends State<HomeScreen> {
               DealOfDay(),
               SizedBox(height: 10),
               TopTenRate(),
-              // SizedBox(height: 10),
+              SizedBox(height: 10),
+              ProductAll(),
             ],
           ),
         ),
